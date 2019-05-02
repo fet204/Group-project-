@@ -33,6 +33,7 @@ public class JavaPadGUI {
 		buttonLoad.setText("Load");
 		window.add(buttonLoad);
 		
+		//Quit button. Onclick to close the app
 		JButton buttonQuit = new JButton();
 		buttonQuit.setText("Quit");
 		//buttonQuit.addActionListener( );
@@ -44,14 +45,7 @@ public class JavaPadGUI {
 			    }
 		});
 		
-		//ActionListener listener = new MyActionLIstener();
 		
 		window.setLayout(new FlowLayout());
 	}
-	
-	//public void actionPerformed(ActionEvent event) {
-		
-	//}
-	
-
 }

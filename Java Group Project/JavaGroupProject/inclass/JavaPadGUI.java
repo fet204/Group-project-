@@ -6,7 +6,10 @@ import javax.swing.*;
 public class JavaPadGUI {
 		public static void main(String[] args) {
 			JFrame window = new JFrame();
+			JPanel southPanel=new JPanel(new FlowLayout());
+			JPanel northPanel = new JPanel(new FlowLayout());
 			
+			window.setTitle("Microsoft JavaPad XP");
 			window.setLocation(new Point(0,0));
 			window.setSize(new Dimension(500,500));
 			window.setVisible(true);
@@ -16,24 +19,31 @@ public class JavaPadGUI {
 			JButton buttonNew = new JButton();
 			buttonNew.setText("New");
 			buttonNew.setSize(new Dimension(200, 200));
-			window.add(buttonNew);
+			northPanel.add(buttonNew);
 			
 			JButton buttonSave = new JButton();
 			buttonSave.setText("Save");
-			window.add(buttonSave);
+			northPanel.add(buttonSave);
 			
 			JButton buttonLoad = new JButton();
 			buttonLoad.setText("Load");
-			window.add(buttonLoad);
+			northPanel.add(buttonLoad);
 			
 			JButton buttonQuit = new JButton();
 			buttonQuit.setText("Quit");
 			//buttonQuit.addActionListener( );
-			window.add(buttonQuit);
+			northPanel.add(buttonQuit);
 			
-			//ActionListener listener = new MyActionLIstener();
+			window.add(northPanel, BorderLayout.NORTH);
 			
-			window.setLayout(new FlowLayout());
+			southPanel.add(new JLabel("Microsoft: Resistance is frutile"));
+	        window.add(southPanel,BorderLayout.SOUTH);
+	        southPanel.setVisible(true);
+	        
+	        
+			//window.setLayout(new FlowLayout());
+			
+			
 			
 			
 		}

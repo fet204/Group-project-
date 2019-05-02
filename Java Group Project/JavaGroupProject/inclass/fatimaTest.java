@@ -7,11 +7,10 @@ public class fatimaTest {
 		 JFrame window=new JFrame();
 		 JPanel southPanel=new JPanel(new FlowLayout());
 		 JTextArea textArea = new JTextArea();
-
-		JScrollPane areaScrollPane = new JScrollPane(textArea);
-		textArea.setFont(new Font("Serif", Font.ITALIC, 16));
-		textArea.setLineWrap(true);
-		textArea.setWrapStyleWord(true);
+		 JScrollPane areaScrollPane = new JScrollPane(textArea);
+		 textArea.setFont(new Font("Serif", Font.ITALIC, 16));
+		 textArea.setLineWrap(true);
+		 textArea.setWrapStyleWord(true);
 
         window.setForeground(Color.blue);
         window.setLocation(new Point(0,0));
@@ -25,7 +24,7 @@ public class fatimaTest {
       
         areaScrollPane.setVerticalScrollBarPolicy(
         JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-       areaScrollPane.setPreferredSize(new Dimension(400, 400));
+        areaScrollPane.setPreferredSize(new Dimension(400, 400));
       
         
         
@@ -39,3 +38,6 @@ public class fatimaTest {
 		
 	}
 }
+
+/*JPanel centerPanel = new JPanel(new GridLayout(25,10)); 
+window.add(centerPanel, BorderLayout.CENTER);*/

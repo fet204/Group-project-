@@ -12,7 +12,7 @@ public class JavaPadGUI {
 			window.setVisible(true);
 			
 			//window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			
+			/*test*/
 			JButton buttonNew = new JButton();
 			buttonNew.setText("New");
 			buttonNew.setSize(new Dimension(200, 200));

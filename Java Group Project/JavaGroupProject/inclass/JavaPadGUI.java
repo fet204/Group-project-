@@ -41,7 +41,7 @@ public class JavaPadGUI {
 	        southPanel.setVisible(true);
 	        
 	        
-			//window.setLayout(new FlowLayout());
+			
 			
 			
 			

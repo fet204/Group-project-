@@ -1,4 +1,4 @@
-package inclass;
+package org.project;
 import java.awt.*;
 import javax.swing.*;
 

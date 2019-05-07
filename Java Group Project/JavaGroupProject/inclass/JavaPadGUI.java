@@ -33,6 +33,7 @@ public class JavaPadGUI {
 		buttonLoad.setText("Load");
 		window.add(buttonLoad);
 		
+		//Test me
 		//Quit button. Onclick to close the app
 		JButton buttonQuit = new JButton();
 		buttonQuit.setText("Quit");

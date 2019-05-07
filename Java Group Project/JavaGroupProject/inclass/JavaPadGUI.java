@@ -8,10 +8,9 @@ import javax.swing.*;
 public class JavaPadGUI {
 	
 	public JavaPadGUI() {
-		showGUI();
 	}
 	
-	public void showGUI() {
+	public static void main(String[] args) {
 		JFrame window = new JFrame();
 		
 		window.setLocation(new Point(0,0));

@@ -1,4 +1,4 @@
-package inclass;
+package org;
 
 import java.io.*;
 import java.util.*;

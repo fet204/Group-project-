@@ -1,17 +1,9 @@
-package inclass;
+package org;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 import javax.swing.*;
 
-public class JavaPadGUI {
-	
-	public JavaPadGUI() {
-		showGUI();
-	}
-	
-	public void showGUI() {
+public class frankTest {
+	public static void main(String[] args) {
 		JFrame window = new JFrame();
 		
 		window.setLocation(new Point(0,0));
@@ -33,19 +25,21 @@ public class JavaPadGUI {
 		buttonLoad.setText("Load");
 		window.add(buttonLoad);
 		
-		//Quit button. Onclick to close the app
 		JButton buttonQuit = new JButton();
 		buttonQuit.setText("Quit");
 		//buttonQuit.addActionListener( );
 		window.add(buttonQuit);
-		buttonQuit.addActionListener(new ActionListener(){
-			 @Override
-			    public void actionPerformed(ActionEvent e) {
-			        System.exit(1);
-			    }
-		});
 		
+		//ActionListener listener = new MyActionLIstener();
 		
 		window.setLayout(new FlowLayout());
+		
+		
 	}
+	
+	//public void actionPerformed(ActionEvent event) {
+		
+	//}
+	
+
 }

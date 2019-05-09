@@ -1,4 +1,4 @@
-package inclass;
+package org;
 
 //This program provides a simple notepad-like editor.
 public class JavaPadMain {

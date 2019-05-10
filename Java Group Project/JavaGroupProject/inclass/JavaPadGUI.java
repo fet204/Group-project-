@@ -29,14 +29,11 @@ public class JavaPadGUI {
 			buttonNew.setText("New");
 			buttonNew.setSize(new Dimension(200, 200));
 			northPanel.add(buttonNew);
-			
-			
+			// Setting the text to a single space. "" doesn't work...
 			buttonNew.addActionListener(new ActionListener() {
 				@Override 
 				public void actionPerformed(ActionEvent newFile) {
 					textWindow.setText(" ");
-					
-					
 				}
 			});
 			

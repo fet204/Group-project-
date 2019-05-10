@@ -2,6 +2,7 @@ package inclass;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.*;
 
 import javax.swing.*;
 
@@ -48,6 +49,8 @@ public class JavaPadGUI {
 				@Override 
 				public void actionPerformed(ActionEvent newFile) {
 					
+					// This "thing" writes over the file in hardcode??????
+					// FileWriter hardcode = new FileWriter("hardcode.txt");
 					
 					
 				}

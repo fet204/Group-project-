@@ -9,11 +9,13 @@ import javax.swing.*;
 
 public class JavaPadGUI {
 		public static void main(String[] args) {
+			
 			//SEPERATE PANELS FOR HOLDING THE PANELS
 			JFrame window = new JFrame();
 			JPanel southPanel = new JPanel(new FlowLayout());
 			JPanel northPanel = new JPanel(new FlowLayout());
 			
+			// Main window
 			window.setTitle("Microsoft JavaPad XP");
 			window.setLocation(new Point(0,0));
 			window.setSize(new Dimension(500,500));
@@ -22,7 +24,6 @@ public class JavaPadGUI {
 			//TEXT WINDOW
 			TextArea textWindow = new TextArea("",15, 25, 1);
 			window.add(textWindow,BorderLayout.CENTER);
-
 			
 			
 			// NEW BUTTON

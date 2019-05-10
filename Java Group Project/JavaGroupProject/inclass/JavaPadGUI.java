@@ -47,10 +47,17 @@ public class JavaPadGUI {
 			//SAVE FUNCTION
 			buttonNew.addActionListener(new ActionListener() {
 				@Override 
-				public void actionPerformed(ActionEvent newFile) {
+				public void actionPerformed(ActionEvent saveFile) {
 					
 					// This "thing" writes over the file in hardcode??????
-					// FileWriter hardcode = new FileWriter("hardcode.txt");
+					/*
+					 * trying to use the FileWriter to take the text from the textWindow 
+					 * and replace the works in hardcode. That way it will act like a save function.
+					 * if i can reverse this process, i can actually knock out the load button too!
+					 */
+					FileWriter hardcode = new FileWriter("hardcode.txt");
+					((FileWriter) hardcode).FileWriter(textWindow);
+					
 					
 					
 				}
@@ -61,31 +68,44 @@ public class JavaPadGUI {
 			JButton buttonLoad = new JButton();
 			buttonLoad.setText("Load");
 			northPanel.add(buttonLoad);
+			// ActionListener
+			buttonLoad.addActionListener(new ActionListener() {
+				@Override 
+				public void actionPerformed(ActionEvent loadFile) {
+					
+				}
+			});
 			
 			
 			// QUIT BUTTON 
 			JButton buttonQuit = new JButton();
 			buttonQuit.setText("Quit");
 			northPanel.add(buttonQuit);
-			
-			// Test action listener saveAndQuit
-			
-			
-			
+						
 			// Vince action edited 
 			buttonQuit.addActionListener(new ActionListener(){
 				 @Override
 				    public void actionPerformed(ActionEvent saveAndQuit) {
-				        int choice = JOptionPane.showConfirmDialog(buttonQuit, "Quitting; Save?","Quit", JOptionPane.YES_NO_OPTION);
+				        int choice = JOptionPane.showConfirmDialog(
+				        		buttonQuit, "Quitting; Save?","Quit", JOptionPane.YES_NO_OPTION);
 				        
 				        if (choice == JOptionPane.YES_OPTION) {
 				        	
-				        	//STILL NEED TO WRITE THE SAVE FUNCTION
+				        	// STILL NEED TO WRITE THE SAVE FUNCTION
 				        	
-				        	//Close Function
+				        	// Close Function here
+				        	/*
+				        	 *  This has something to do with the EXIT_ON_CLOSE thing but not sure how
+				        	 *  this is supposed to link with the button that i just made. 
+				        	 */
 				        	
 				        	
 				        } 
+				        else if (choice == JOptionPane.NO_OPTION){
+				        	
+				        	// Exit close function here. no saving
+				        	
+				        }
 				        
 				    }
 			});

@@ -1,4 +1,4 @@
-package inclass;
+package org;
 import java.awt.*;
 import javax.swing.*;
 
@@ -6,7 +6,7 @@ public class fatima {
 	public static void main(String[] args) {
 		 JFrame window=new JFrame();
 		 JPanel southPanel=new JPanel(new FlowLayout());
-		 JScrollPane areaScrollPane = new JScrollPane(textArea);
+		 JScrollPane areaScrollPane = new JScrollPane();
 
         window.setForeground(Color.blue);
         window.setLocation(new Point(0,0));

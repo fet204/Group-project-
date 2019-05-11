@@ -8,6 +8,8 @@ import javax.swing.*;
 
 
 public class JavaPadGUI {
+	
+	
 		public static void main(String[] args) {
 			//SEPERATE PANELS FOR HOLDING THE PANELS
 			JFrame window = new JFrame();

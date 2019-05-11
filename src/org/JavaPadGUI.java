@@ -7,16 +7,28 @@ import java.io.*;
 import javax.swing.*;
 
 
-public class JavaPadGUI {
+public class JavaPadGUI implements ActionListener {
 	
+	private static JavaPadModel model = new JavaPadModel();
+	private static String filename = "Microsoft JavaPad XP";
+	
+	public JavaPadGUI() {
+		
+	}
 	
 		public static void main(String[] args) {
 			//SEPERATE PANELS FOR HOLDING THE PANELS
+			
+			try {
+				  UIManager.setLookAndFeel(
+				    UIManager.getSystemLookAndFeelClassName());
+				} catch (Exception e) {}
+
 			JFrame window = new JFrame();
 			JPanel southPanel = new JPanel(new FlowLayout());
 			JPanel northPanel = new JPanel(new FlowLayout());
 			
-			window.setTitle("Microsoft JavaPad XP");
+			window.setTitle(filename);
 			window.setLocation(new Point(0,0));
 			window.setSize(new Dimension(500,500));
 			window.setVisible(true);
@@ -50,7 +62,8 @@ public class JavaPadGUI {
 				public void actionPerformed(ActionEvent newFile) {
 					
 					// This "thing" writes over the file in hardcode??????
-					// FileWriter hardcode = new FileWriter("hardcode.txt");					
+					// FileWriter hardcode = new FileWriter("hardcode.txt");
+					model.save(filename);
 				}
 			});
 			
@@ -73,9 +86,11 @@ public class JavaPadGUI {
 				        
 				        if (choice == JOptionPane.YES_OPTION) {
 				        	
-				        	//STILL NEED TO WRITE THE SAVE FUNCTION
+				        	//STILL NEED TO WRITE THE SAVE FUNCTION -Frank
+				        	//Isn't it already in JavaPadModel? -V
 				        	
-				        	//Close Function
+				        	model.save(filename);
+				        	System.exit(1);
 				        } 
 				    }
 			});
@@ -85,5 +100,11 @@ public class JavaPadGUI {
 			southPanel.add(new JLabel("Microsoft: Resistance is futile"));
 	        window.add(southPanel,BorderLayout.SOUTH);
 	        southPanel.setVisible(true);
+		}
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
 		}
 	}

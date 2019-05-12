@@ -57,12 +57,13 @@ public class JavaPadGUI implements ActionListener {
 			northPanel.add(buttonSave);
 			
 			//SAVE FUNCTION
-			buttonNew.addActionListener(new ActionListener() {
+			buttonSave.addActionListener(new ActionListener() {
 				@Override 
 				public void actionPerformed(ActionEvent newFile) {
 					
 					// This "thing" writes over the file in hardcode??????
 					// FileWriter hardcode = new FileWriter("hardcode.txt");
+					
 					model.save(filename);
 				}
 			});
@@ -71,6 +72,13 @@ public class JavaPadGUI implements ActionListener {
 			JButton buttonLoad = new JButton();
 			buttonLoad.setText("Load");
 			northPanel.add(buttonLoad);
+			buttonLoad.addActionListener(new ActionListener() {
+
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					model.load(filename);
+				}	
+			});
 			
 			// QUIT BUTTON 
 			JButton buttonQuit = new JButton();

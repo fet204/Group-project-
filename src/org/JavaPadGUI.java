@@ -9,8 +9,9 @@ import javax.swing.*;
 
 public class JavaPadGUI implements ActionListener {
 	
-	private static JavaPadModel model = new JavaPadModel();
-	private static String filename = "Microsoft JavaPad XP";
+	private static final JavaPadModel model = new JavaPadModel();
+	private static final String filename = "Microsoft JavaPad XP";
+	private static final String textFile = "hardcode.txt";
 	
 	public JavaPadGUI() {
 		

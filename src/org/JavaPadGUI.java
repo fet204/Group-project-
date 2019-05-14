@@ -60,12 +60,9 @@ public class JavaPadGUI implements ActionListener {
 			//SAVE FUNCTION
 			buttonSave.addActionListener(new ActionListener() {
 				@Override 
-				public void actionPerformed(ActionEvent newFile) {
+				public void actionPerformed(ActionEvent e) {
 					
-					// This "thing" writes over the file in hardcode??????
-					// FileWriter hardcode = new FileWriter("hardcode.txt");
 					
-					model.save(filename);
 				}
 			});
 			

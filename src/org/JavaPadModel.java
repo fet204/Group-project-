@@ -32,18 +32,16 @@ public class JavaPadModel {
 		try {
 			Scanner in = new Scanner(new File(filename));
 			String newtext = "";
-			while (in.hasNextLine()) {
-				newtext += in.nextLine() + "\n";
+				while (in.hasNextLine()) {
+					newtext += in.nextLine() + "\n";
+				}	
+				text = newtext;
 			}
-			
-			text = newtext;
-			}
-		
 		catch (IOException ioe) {
-			result = false;
-			}
-		return result;
+				result = false;
 		}
+		return result;
+	}
 	
 	
 	public boolean save(String filename) {
@@ -53,13 +51,15 @@ public class JavaPadModel {
 			out.print(text);
 			lastFileName = filename;
 			}
-catch (IOException ioe) {
-	result = false;
-	}
-		return result;
+		catch (IOException ioe) {
+			result = false;
 		}
+		return result;
+	}
+	
+	
 	public void setUndoPoint(String text) {
 			this.text = text;
 			version++;
-	}
-	}
+		}
+}

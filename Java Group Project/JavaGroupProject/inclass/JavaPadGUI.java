@@ -34,7 +34,7 @@ public class JavaPadGUI {
 			buttonNew.addActionListener(new ActionListener() {
 				@Override 
 				public void actionPerformed(ActionEvent newFile) {
-					textWindow.setText(" "); //setText must be something to work. "" won't work.
+					textWindow.setText(""); //setText must be something to work. "" won't work.
 				}
 			});
 			

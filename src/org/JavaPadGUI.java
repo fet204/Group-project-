@@ -7,16 +7,29 @@ import java.io.*;
 import javax.swing.*;
 
 
-public class JavaPadGUI {
+public class JavaPadGUI implements ActionListener {
 	
+	private static final JavaPadModel model = new JavaPadModel();
+	private static final String filename = "Microsoft JavaPad XP";
+	private static final String textFile = "hardcode.txt";
+	
+	public JavaPadGUI() {
+		
+	}
 	
 		public static void main(String[] args) {
 			//SEPERATE PANELS FOR HOLDING THE PANELS
+			
+			try {
+				  UIManager.setLookAndFeel(
+				    UIManager.getSystemLookAndFeelClassName());
+				} catch (Exception e) {}
+
 			JFrame window = new JFrame();
 			JPanel southPanel = new JPanel(new FlowLayout());
 			JPanel northPanel = new JPanel(new FlowLayout());
 			
-			window.setTitle("Microsoft JavaPad XP");
+			window.setTitle(filename);
 			window.setLocation(new Point(0,0));
 			window.setSize(new Dimension(500,500));
 			window.setVisible(true);
@@ -45,12 +58,11 @@ public class JavaPadGUI {
 			northPanel.add(buttonSave);
 			
 			//SAVE FUNCTION
-			buttonNew.addActionListener(new ActionListener() {
+			buttonSave.addActionListener(new ActionListener() {
 				@Override 
-				public void actionPerformed(ActionEvent newFile) {
+				public void actionPerformed(ActionEvent e) {
 					
-					// This "thing" writes over the file in hardcode??????
-					// FileWriter hardcode = new FileWriter("hardcode.txt");					
+					
 				}
 			});
 			
@@ -58,6 +70,13 @@ public class JavaPadGUI {
 			JButton buttonLoad = new JButton();
 			buttonLoad.setText("Load");
 			northPanel.add(buttonLoad);
+			buttonLoad.addActionListener(new ActionListener() {
+
+				@Override
+				public void actionPerformed(ActionEvent e) {
+					model.load(filename);
+				}	
+			});
 			
 			// QUIT BUTTON 
 			JButton buttonQuit = new JButton();
@@ -73,9 +92,11 @@ public class JavaPadGUI {
 				        
 				        if (choice == JOptionPane.YES_OPTION) {
 				        	
-				        	//STILL NEED TO WRITE THE SAVE FUNCTION
+				        	//STILL NEED TO WRITE THE SAVE FUNCTION -Frank
+				        	//Isn't it already in JavaPadModel? -V
 				        	
-				        	//Close Function
+				        	model.save(filename);
+				        	System.exit(1);
 				        } 
 				    }
 			});
@@ -85,5 +106,11 @@ public class JavaPadGUI {
 			southPanel.add(new JLabel("Microsoft: Resistance is futile"));
 	        window.add(southPanel,BorderLayout.SOUTH);
 	        southPanel.setVisible(true);
+		}
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			// TODO Auto-generated method stub
+			
 		}
 	}

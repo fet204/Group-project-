@@ -53,7 +53,7 @@ public class JavaPadGUI {
 					// This "thing" writes over the file in hardcode??????
 					
 					 * trying to use the FileWriter to take the text from the textWindow 
-					 * and replace the works in hardcode. That way it will act like a save function.
+					 * and replace the words in hardcode. That way it will act like a save function.
 					 * if i can reverse this process, i can actually knock out the load button too!
 					 
 					

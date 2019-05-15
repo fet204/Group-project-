@@ -61,8 +61,7 @@ public class JavaPadGUI implements ActionListener {
 			buttonSave.addActionListener(new ActionListener() {
 				@Override 
 				public void actionPerformed(ActionEvent e) {
-					
-					
+					JOptionPane.showMessageDialog(null, "Saved");
 				}
 			});
 			
@@ -74,7 +73,8 @@ public class JavaPadGUI implements ActionListener {
 
 				@Override
 				public void actionPerformed(ActionEvent e) {
-					model.load(filename);
+					model.save(textFile);
+					JOptionPane.showMessageDialog(null, "Saved");
 				}	
 			});
 			

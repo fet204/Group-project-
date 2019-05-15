@@ -8,6 +8,7 @@ import javax.swing.*;
 
 
 public class JavaPadGUI {
+	
 		public static void main(String[] args) {
 			
 			//SEPERATE PANELS FOR HOLDING THE PANELS
@@ -43,35 +44,37 @@ public class JavaPadGUI {
 			JButton buttonSave = new JButton();
 			buttonSave.setText("Save");
 			northPanel.add(buttonSave);
-			
+			/*
 			//SAVE FUNCTION
-			buttonNew.addActionListener(new ActionListener() {
+			buttonSave.addActionListener(new ActionListener() {
 				@Override 
 				public void actionPerformed(ActionEvent saveFile) {
 					
 					// This "thing" writes over the file in hardcode??????
-					/*
+					
 					 * trying to use the FileWriter to take the text from the textWindow 
 					 * and replace the works in hardcode. That way it will act like a save function.
 					 * if i can reverse this process, i can actually knock out the load button too!
 					 
+					
 					String text = "";
 					String lastFileName = null;
 					try {
 						PrintStream out = new PrintStream(new File("hardcode.txt"));
 						out.print(text);
 						lastFileName = "hardcode.txt";
+						out.close();
 						}
 					catch (IOException ioe) {
 						//result = false;
 						}
 					
-					*/
+					
 					
 					
 				}
 			});
-			
+			*/
 			
 			// LOAD BUTTON
 			JButton buttonLoad = new JButton();

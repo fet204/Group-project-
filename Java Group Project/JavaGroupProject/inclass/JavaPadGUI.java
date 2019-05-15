@@ -34,7 +34,7 @@ public class JavaPadGUI {
 			buttonNew.addActionListener(new ActionListener() {
 				@Override 
 				public void actionPerformed(ActionEvent newFile) {
-					textWindow.setText(""); //setText must be something to work. "" won't work.
+					textWindow.setText(" "); //setText must be something to work. "" won't work.
 				}
 			});
 			
@@ -55,8 +55,17 @@ public class JavaPadGUI {
 					 * and replace the works in hardcode. That way it will act like a save function.
 					 * if i can reverse this process, i can actually knock out the load button too!
 					 */
-					FileWriter hardcode = new FileWriter("hardcode.txt");
-					((FileWriter) hardcode).FileWriter(textWindow);
+					String text = "";
+					String lastFileName = null;
+					try {
+						PrintStream out = new PrintStream(new File("hardcode.txt"));
+						out.print(text);
+						lastFileName = "hardcode.txt";
+						}
+					catch (IOException ioe) {
+						//result = false;
+						}
+					
 					
 					
 					

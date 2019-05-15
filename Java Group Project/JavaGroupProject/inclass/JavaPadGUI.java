@@ -54,7 +54,7 @@ public class JavaPadGUI {
 					 * trying to use the FileWriter to take the text from the textWindow 
 					 * and replace the works in hardcode. That way it will act like a save function.
 					 * if i can reverse this process, i can actually knock out the load button too!
-					 */
+					 
 					String text = "";
 					String lastFileName = null;
 					try {
@@ -66,7 +66,7 @@ public class JavaPadGUI {
 						//result = false;
 						}
 					
-					
+					*/
 					
 					
 				}

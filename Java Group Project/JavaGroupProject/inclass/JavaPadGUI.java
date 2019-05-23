@@ -44,28 +44,36 @@ public class JavaPadGUI {
 			JButton buttonSave = new JButton();
 			buttonSave.setText("Save");
 			northPanel.add(buttonSave);
-			/*
+			
 			//SAVE FUNCTION
 			buttonSave.addActionListener(new ActionListener() {
 				@Override 
 				public void actionPerformed(ActionEvent saveFile) {
 					
 					// This "thing" writes over the file in hardcode??????
-					
+					/*
 					 * trying to use the FileWriter to take the text from the textWindow 
 					 * and replace the words in hardcode. That way it will act like a save function.
 					 * if i can reverse this process, i can actually knock out the load button too!
-					 
+					 * 
+					 * testing1
+					 * one 
+					 * two three 
+					 * weeeee  
+					 * 
+					 */
 					
-					String text = "";
-					String lastFileName = null;
+					
+					String text = "text";
+					String lastFileName = "hardcode.txt";
 					try {
-						PrintStream out = new PrintStream(new File("hardcode.txt"));
-						out.print(text);
-						lastFileName = "hardcode.txt";
+						PrintWriter out = new PrintWriter(lastFileName); // new FileWriter(lastFileName));
+						String textInWindow = textWindow.getText();
+						//System.out.println(textInWindow);
+						out.print(textInWindow);
 						out.close();
 						}
-					catch (IOException ioe) {
+					catch (Exception e) {
 						//result = false;
 						}
 					
@@ -74,7 +82,7 @@ public class JavaPadGUI {
 					
 				}
 			});
-			*/
+			
 			
 			// LOAD BUTTON
 			JButton buttonLoad = new JButton();
@@ -142,6 +150,7 @@ public class JavaPadGUI {
 			
 			
 		}
+		
 		
 		
 		

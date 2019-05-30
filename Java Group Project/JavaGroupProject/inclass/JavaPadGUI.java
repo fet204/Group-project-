@@ -89,7 +89,7 @@ public class JavaPadGUI {
 					    String str;
 					    while ((str = in.readLine()) != null) {
 					    	textWindow.setText("");
-					    	str.append(str);
+					    	//str.append(str);
 					        textWindow.append(str);
 					    }
 					} catch (IOException e) {

@@ -3,15 +3,17 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
+import java.util.Scanner;
 
 import javax.swing.*;
 
 
-public class JavaPadGUI implements ActionListener {
+public class JavaPadGUI extends JavaPadModel implements ActionListener {
 	
 	private static final JavaPadModel model = new JavaPadModel();
 	private static final String filename = "Microsoft JavaPad XP";
 	private static final String textFile = "hardcode.txt";
+	private static String text = "";
 	
 	public JavaPadGUI() {
 		
@@ -61,10 +63,12 @@ public class JavaPadGUI implements ActionListener {
 			buttonSave.addActionListener(new ActionListener() {
 				@Override 
 				public void actionPerformed(ActionEvent e) {
-					
-					
-				}
-			});
+					try{
+						
+					} catch(Exception ex) {
+						ex.printStackTrace();
+					}
+				}});
 			
 			// LOAD BUTTON
 			JButton buttonLoad = new JButton();

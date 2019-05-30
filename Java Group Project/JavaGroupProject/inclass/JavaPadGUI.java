@@ -89,6 +89,7 @@ public class JavaPadGUI {
 					    String str;
 					    while ((str = in.readLine()) != null) {
 					    	textWindow.setText("");
+					    	str.append(str);
 					        textWindow.append(str);
 					    }
 					} catch (IOException e) {
@@ -115,8 +116,21 @@ public class JavaPadGUI {
 				        
 				        if (choice == JOptionPane.YES_OPTION) {
 				        	
-				        	// STILL NEED TO WRITE THE SAVE FUNCTION
-				        	
+				        	// Save function
+							String lastFileName = "hardcode.txt";
+							try { 
+								
+								PrintWriter out = new PrintWriter(lastFileName);
+								String textInWindow = textWindow.getText();
+								System.out.println(textInWindow);
+								out.write(textInWindow);
+								out.close();
+							    	
+								}
+							
+							catch (Exception e) {
+								//result = false;
+								}
 				        	// Close Function here
 				        	System.exit(0);
 

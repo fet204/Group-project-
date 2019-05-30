@@ -48,36 +48,23 @@ public class JavaPadGUI {
 			//SAVE FUNCTION
 			buttonSave.addActionListener(new ActionListener() {
 				@Override 
-				public void actionPerformed(ActionEvent saveFile) {
-					
-					// This "thing" writes over the file in hardcode??????
-					/*
-					 * trying to use the FileWriter to take the text from the textWindow 
-					 * and replace the words in hardcode. That way it will act like a save function.
-					 * if i can reverse this process, i can actually knock out the load button too!
-					 * 
-					 * testing1
-					 * one 
-					 * two three 
-					 * weeeee  
-					 * 
-					 */
-					
+				public void actionPerformed(ActionEvent saveFile) {				
 					
 					String text = "text";
 					String lastFileName = "hardcode.txt";
-					try {
-						PrintWriter out = new PrintWriter(lastFileName); // new FileWriter(lastFileName));
+					try { 
+						
+						PrintWriter out = new PrintWriter(lastFileName);
 						String textInWindow = textWindow.getText();
-						//System.out.println(textInWindow);
-						out.print(textInWindow);
+						System.out.println(textInWindow);
+						out.write(textInWindow);
 						out.close();
+					    
+					    
 						}
 					catch (Exception e) {
 						//result = false;
 						}
-					
-					
 					
 					
 				}
@@ -93,7 +80,21 @@ public class JavaPadGUI {
 				@Override 
 				public void actionPerformed(ActionEvent loadFile) {
 					
-					// written here 
+					String text = "text";
+					String lastFileName = "hardcode.txt";
+					
+					BufferedReader in = null;
+					try {
+					    in = new BufferedReader(new FileReader("hardcode.txt"));
+					    String str;
+					    while ((str = in.readLine()) != null) {
+					    	textWindow.setText("");
+					        textWindow.append(str);
+					    }
+					} catch (IOException e) {
+					} finally {
+					    try { in.close(); } catch (Exception ex) { }
+					}
 					
 					
 				}
@@ -117,19 +118,12 @@ public class JavaPadGUI {
 				        	// STILL NEED TO WRITE THE SAVE FUNCTION
 				        	
 				        	// Close Function here
-				        	/*
-				        	 *  This has something to do with the EXIT_ON_CLOSE thing but not sure how
-				        	 *  this is supposed to link with the button that i just made. 
-				        	 */
-				        	
-				        	
+				        	System.exit(0);
+
 				        } 
 				        else if (choice == JOptionPane.NO_OPTION){
-				        	
-				        	// Exit close function here. no saving
-				        	
+				        	System.exit(0);
 				        }
-				        
 				    }
 			});
 			

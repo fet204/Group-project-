@@ -99,6 +99,7 @@ public class JavaPadGUI {
 					    for(int i = 0; i < list.size(); i++) {
 					    	System.out.print(list.get(i));
 					    	textWindow.append(list.get(i));
+					    	textWindow.append("\n");
 					    }
 					} catch (IOException e) {
 					} finally {

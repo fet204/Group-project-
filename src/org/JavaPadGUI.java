@@ -158,7 +158,7 @@ public class JavaPadGUI {
 			southPanel.add(new JLabel("Microsoft: Resistance is futile"));
 	        window.add(southPanel,BorderLayout.SOUTH);
 	        southPanel.setVisible(true);
-	        
+
 
 
 

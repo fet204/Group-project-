@@ -1,8 +1,11 @@
-package inclass;
+package org;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.*;
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.stream.Stream;
 
 import javax.swing.*;
 
@@ -85,12 +88,17 @@ public class JavaPadGUI {
 
 					BufferedReader in = null;
 					try {
+						textWindow.setText("");
 					    in = new BufferedReader(new FileReader("hardcode.txt"));
-					    String str;
-					    while ((str = in.readLine()) != null) {
-					    	textWindow.setText("");
-					    	//str.append(str);
-					        textWindow.append(str);
+					    Scanner scan = new Scanner(new File("hardcode.txt"));
+					    ArrayList<String> list = new ArrayList<String>();
+					    while ( scan.hasNextLine()) {
+					    	String word = scan.nextLine();
+					    	list.add(word);
+					    }
+					    for(int i = 0; i < list.size(); i++) {
+					    	System.out.print(list.get(i));
+					    	textWindow.append(list.get(i));
 					    }
 					} catch (IOException e) {
 					} finally {

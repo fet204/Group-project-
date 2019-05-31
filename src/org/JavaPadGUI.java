@@ -12,8 +12,15 @@ import javax.swing.*;
 
 public class JavaPadGUI {
 
+	
+		
 		public static void main(String[] args) {
 
+			try {
+				  UIManager.setLookAndFeel(
+				    UIManager.getSystemLookAndFeelClassName());
+				} catch (Exception e) {}
+			
 			//SEPERATE PANELS FOR HOLDING THE PANELS
 			JFrame window = new JFrame();
 			JPanel southPanel = new JPanel(new FlowLayout());
@@ -143,9 +150,6 @@ public class JavaPadGUI {
 				        	// Close Function here
 				        	System.exit(0);
 
-				        }
-				        else if (choice == JOptionPane.NO_OPTION){
-				        	System.exit(0);
 				        }
 				    }
 			});

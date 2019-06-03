@@ -9,6 +9,14 @@ import java.util.stream.Stream;
 
 import javax.swing.*;
 
+/*
+ * This is the Java Group project by:
+ * Vince 
+ * Frank
+ * Fatima
+ * from Java 2 - Computer Science 143
+ * Professor: Nizami
+ */
 
 public class JavaPadGUI {
 
@@ -16,6 +24,7 @@ public class JavaPadGUI {
 		
 		public static void main(String[] args) {
 
+			//Eye candy. This will make the gui look like the native version
 			try {
 				  UIManager.setLookAndFeel(
 				    UIManager.getSystemLookAndFeelClassName());
@@ -27,7 +36,7 @@ public class JavaPadGUI {
 			JPanel northPanel = new JPanel(new FlowLayout());
 
 			// Main window
-			window.setTitle("Microsoft JavaPad XP");
+			window.setTitle("Macrosoft JavaPad XP");
 			window.setLocation(new Point(0,0));
 			window.setSize(new Dimension(500,500));
 			window.setVisible(true);
@@ -70,10 +79,10 @@ public class JavaPadGUI {
 						out.write(textInWindow);
 						out.close();
 
+						System.out.println("------------------SAVED--------------");
 
 						}
 					catch (Exception e) {
-						//result = false;
 						}
 
 
@@ -108,7 +117,9 @@ public class JavaPadGUI {
 					    	textWindow.append(list.get(i));
 					    	textWindow.append("\n");
 					    }
+					    scan.close();
 					} catch (IOException e) {
+						e.printStackTrace();
 					} finally {
 					    try { in.close(); } catch (Exception ex) { }
 					}
@@ -123,7 +134,6 @@ public class JavaPadGUI {
 			buttonQuit.setText("Quit");
 			northPanel.add(buttonQuit);
 
-			// Vince action edited
 			buttonQuit.addActionListener(new ActionListener(){
 				 @Override
 				    public void actionPerformed(ActionEvent saveAndQuit) {
@@ -142,10 +152,10 @@ public class JavaPadGUI {
 								out.write(textInWindow);
 								out.close();
 
+								System.out.println("------------------SAVED--------------");
 								}
 
 							catch (Exception e) {
-								//result = false;
 								}
 				        	// Close Function here
 				        	System.exit(0);
@@ -153,27 +163,14 @@ public class JavaPadGUI {
 				        }
 				    }
 			});
-
-
+			
 			// Adding Panel to the window on north
 			window.add(northPanel, BorderLayout.NORTH);
 
-
 			// Fatimas bottom text.
-			southPanel.add(new JLabel("Microsoft: Resistance is futile"));
+			southPanel.add(new JLabel("Macrosoft: Resistance is futile"));
 	        window.add(southPanel,BorderLayout.SOUTH);
 	        southPanel.setVisible(true);
-
-
-
-
-
-
-
+	        
 		}
-
-
-
-
-
 	}

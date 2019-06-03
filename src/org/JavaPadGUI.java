@@ -120,6 +120,8 @@ public class JavaPadGUI {
 					    scan.close();
 					} catch (IOException e) {
 						e.printStackTrace();
+						int err = JOptionPane.showConfirmDialog(null, "There was an error!", "Error Message", JOptionPane.DEFAULT_OPTION);
+						System.out.println(err);
 					} finally {
 					    try { in.close(); } catch (Exception ex) { }
 					}
@@ -156,6 +158,7 @@ public class JavaPadGUI {
 								}
 
 							catch (Exception e) {
+								e.printStackTrace();
 								}
 				        	// Close Function here
 				        	System.exit(0);

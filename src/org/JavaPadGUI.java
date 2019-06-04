@@ -38,9 +38,10 @@ public class JavaPadGUI {
 			// Main window
 			window.setTitle("Macrosoft JavaPad XP");
 			window.setLocation(new Point(0,0));
-			window.setSize(new Dimension(500,500));
+			window.setSize(new Dimension(800,800));
 			window.setVisible(true);
-
+			// Adding Panel to the window on north
+			window.add(northPanel, BorderLayout.NORTH);
 			//TEXT WINDOW
 			TextArea textWindow = new TextArea("",15, 25, 1);
 			window.add(textWindow,BorderLayout.CENTER);
@@ -120,7 +121,7 @@ public class JavaPadGUI {
 					    scan.close();
 					} catch (IOException e) {
 						e.printStackTrace();
-						int err = JOptionPane.showConfirmDialog(null, "There was an error!", "Error Message", JOptionPane.DEFAULT_OPTION);
+						int err = JOptionPane.showConfirmDialog(null, "Could not acess file hardcode.txt", "I/O Error", JOptionPane.DEFAULT_OPTION);
 						System.out.println(err);
 					} finally {
 					    try { in.close(); } catch (Exception ex) { }
@@ -166,9 +167,6 @@ public class JavaPadGUI {
 				        }
 				    }
 			});
-			
-			// Adding Panel to the window on north
-			window.add(northPanel, BorderLayout.NORTH);
 
 			// Fatimas bottom text.
 			southPanel.add(new JLabel("Macrosoft: Resistance is futile"));
